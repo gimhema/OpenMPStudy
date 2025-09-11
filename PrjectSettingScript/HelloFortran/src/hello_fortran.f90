@@ -7,6 +7,7 @@ program hello_fortran
   complex :: complex_var
   character :: char_var
   logical :: logical_var
+  real :: x, y
   print *, "Hello, Fortran from HelloFortran!"
 
 
@@ -22,5 +23,12 @@ program hello_fortran
   print *, "Complex variable:", complex_var
   print *, "Character variable:", char_var
   print *, "Logical variable:", logical_var
+
+
+
+  print *, 'Please enter two numbers. '
+  read(*,*) x, y
+
+  print *, 'The sum and product of the numbers are ', x+y, x*y
 
 end program hello_fortran
