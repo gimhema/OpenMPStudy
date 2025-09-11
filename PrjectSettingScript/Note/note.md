@@ -70,9 +70,25 @@ program hello_fortran
   print *, "Logical variable:", logical_var
 
 end program hello_fortran
+```
 
+주의할 점은 변수 선언부분은 가급적이면 상단에 위치시켜야하는데, 아래와 같은 케이스라면 에러가 발생할 수 있다.
 
 ```
+  character :: char_var
+  logical :: logical_var
+
+  print *, "Hello, Fortran from HelloFortran!"
+
+  real :: x, y << 잘못된 예시
+
+  print *, 'Please enter two numbers. '
+  read(*,*) x, y
+
+  print *, 'The sum and product of the numbers are ', x+y, x*y
+
+```
+
 
 
 
