@@ -24,11 +24,4 @@ program hello_fortran
   print *, "Character variable:", char_var
   print *, "Logical variable:", logical_var
 
-
-
-  print *, 'Please enter two numbers. '
-  read(*,*) x, y
-
-  print *, 'The sum and product of the numbers are ', x+y, x*y
-
 end program hello_fortran
