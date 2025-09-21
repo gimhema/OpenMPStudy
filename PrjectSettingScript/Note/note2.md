@@ -69,3 +69,42 @@ deallocate(arr_mat)
 
 end program array_strings
 ```
+
+
+## 문자열
+
+
+### 정적 스타일
+
+```
+character(len=10) :: host_name
+character(len=20) :: host_ip_address
+character(len=10) :: host_port
+
+host_name = 'localhost'
+host_ip_address = '127.0.0.1'
+host_port = '8080'
+
+print *, "Host Name:", host_name
+print *, "Host IP Address:", host_ip_address
+print *, "Host Port:", host_port
+```
+
+
+### 동적 스타일
+
+```
+character(:), allocatable :: user_id
+character(:), allocatable :: user_profile_name
+character(:), allocatable :: user_chat_message
+
+user_id = 'abc123'
+user_profile_name = 'UserName'
+
+user_chat_message = user_id//':'//" Hello Im User"
+
+print *, "User ID:", user_id
+print *, "User Profile Name:", user_profile_name
+print *, "User Chat Message:", user_chat_message
+```
+
