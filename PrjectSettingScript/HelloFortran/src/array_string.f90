@@ -9,6 +9,11 @@ integer, allocatable :: arr_mat(:,:)
 character(len=10) :: host_name
 character(len=20) :: host_ip_address
 character(len=10) :: host_port
+character(len=50) :: host_connection_info
+
+character(:), allocatable :: user_id
+character(:), allocatable :: user_profile_name
+character(:), allocatable :: user_chat_message
 
 
 int_array = [1, 2, 3, 4, 5]
@@ -51,10 +56,21 @@ host_name = 'localhost'
 host_ip_address = '127.0.0.1'
 host_port = '8080'
 
+host_connection_info = host_name//':'//host_ip_address//':'//host_port
+print *, "Host Connection Info:", host_connection_info
+
 print *, "Host Name:", host_name
 print *, "Host IP Address:", host_ip_address
 print *, "Host Port:", host_port
 
+user_id = 'abc123'
+user_profile_name = 'UserName'
+
+user_chat_message = user_id//':'//" Hello Im User"
+
+print *, "User ID:", user_id
+print *, "User Profile Name:", user_profile_name
+print *, "User Chat Message:", user_chat_message
 
 
 end program array_strings
