@@ -3,9 +3,13 @@ implicit none
 
 integer, dimension(5) :: int_array
 integer :: int_array2(3)
-
 integer, allocatable :: arr_vec(:)
 integer, allocatable :: arr_mat(:,:)
+
+character(len=10) :: host_name
+character(len=20) :: host_ip_address
+character(len=10) :: host_port
+
 
 int_array = [1, 2, 3, 4, 5]
 print *, "Integer array:", int_array
@@ -40,8 +44,17 @@ arr_vec = [arr_vec, 51]
 arr_vec = [arr_vec, 52]
 print *, "Extended array vector:", arr_vec
 
-
 deallocate(arr_vec)
 deallocate(arr_mat)
+
+host_name = 'localhost'
+host_ip_address = '127.0.0.1'
+host_port = '8080'
+
+print *, "Host Name:", host_name
+print *, "Host IP Address:", host_ip_address
+print *, "Host Port:", host_port
+
+
 
 end program array_strings
